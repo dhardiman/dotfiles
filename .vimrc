@@ -1,4 +1,4 @@
-" -----------------------------------------------------------------------------  
+" -----------------------------------------------------------------------------
 " |                            VIM Settings                                   |
 " |                   (see gvimrc for gui vim settings)                       |
 " |                                                                           |
@@ -24,7 +24,7 @@
 " |   :call Tabstyle_spaces = set tab to 2 spaces                             |
 " |                                                                           |
 " | Put machine/user specific settings in ~/.vimrc.local                      |
-" -----------------------------------------------------------------------------  
+" -----------------------------------------------------------------------------
 
 
 set nocompatible
@@ -85,13 +85,13 @@ set cursorline
 " Searching *******************************************************************
 set hlsearch  " highlight search
 set incsearch  " Incremental search, search as you type
-set ignorecase " Ignore case when searching 
+set ignorecase " Ignore case when searching
 set smartcase " Ignore case when searching lowercase
 
 
 " Colors **********************************************************************
 " set t_Co=256 " 256 colors
-set background=dark 
+set background=dark
 syntax on " syntax highlighting
 "colorscheme zenburn
 colorscheme tomorrow-night
@@ -157,7 +157,7 @@ set backspace=indent,eol,start
 set number " Show line numbers
 set matchpairs+=<:>
 set vb t_vb= " Turn off bell, this could be more annoying, but I'm not sure how
-set nofoldenable " Turn off folding 
+set nofoldenable " Turn off folding
 
 
 " Navigation ******************************************************************
@@ -188,7 +188,7 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 " May require ruby compiled in
-autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete 
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 
 
 " Hard to type *****************************************************************
@@ -197,9 +197,9 @@ imap hh =>
 imap aa @
 
 
-" -----------------------------------------------------------------------------  
+" -----------------------------------------------------------------------------
 " |                              Plug-ins                                     |
-" -----------------------------------------------------------------------------  
+" -----------------------------------------------------------------------------
 
 " NERDTree ********************************************************************
 :noremap <Leader>n :NERDTreeToggle<CR>
@@ -213,7 +213,7 @@ let NERDCreateDefaultMappings=0 " I turn this off to make it simple
 " Toggle commenting on 1 line or all selected lines. Wether to comment or not
 " is decided based on the first line; if it's not commented then all lines
 " will be commented
-:map <Leader>c :call NERDComment(0, "toggle")<CR> 
+:map <Leader>c :call NERDComment(0, "toggle")<CR>
 
 
 " SnippetsEmu *****************************************************************
@@ -254,34 +254,34 @@ map <Leader>ra :AS<CR>
 map <Leader>rs :RS<CR>
 
 
-" -----------------------------------------------------------------------------  
+" -----------------------------------------------------------------------------
 " |                             OS Specific                                   |
 " |                      (GUI stuff goes in gvimrc)                           |
-" -----------------------------------------------------------------------------  
+" -----------------------------------------------------------------------------
 
 " Mac *************************************************************************
-"if has("mac") 
-  "" 
+"if has("mac")
+  ""
 "endif
- 
+
 " Windows *********************************************************************
 "if has("gui_win32")
-  "" 
+  ""
 "endif
 
 
 
-" -----------------------------------------------------------------------------  
+" -----------------------------------------------------------------------------
 " |                               Startup                                     |
-" -----------------------------------------------------------------------------  
+" -----------------------------------------------------------------------------
 " Open NERDTree on start
-"autocmd VimEnter * exe 'NERDTree' | wincmd l 
+"autocmd VimEnter * exe 'NERDTree' | wincmd l
 
 
 
-" -----------------------------------------------------------------------------  
+" -----------------------------------------------------------------------------
 " |                               Host specific                               |
-" -----------------------------------------------------------------------------  
+" -----------------------------------------------------------------------------
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif

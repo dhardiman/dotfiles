@@ -31,8 +31,6 @@ git_prompt() {
 
 PS1='\W \u $(git_prompt)$ '
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.
-
 alias cls='tput clear'
 
 # Load in .bashrc -------------------------------------------------
@@ -49,3 +47,8 @@ alias symcrash='/Developer/Platforms/iPhoneOS.platform/Developer/Library/Private
 
 #Go to paros directory, run paros.jar, return to previous directory
 alias paros='cd /Users/davidhardiman/Documents/paros/build/paros/; java -jar paros.jar; cd -'
+
+export ANDROID_HOME=~/android-sdk-macosx/
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

@@ -1,0 +1,43 @@
+[user]
+	name = David Hardiman
+	email =
+[mergetool "pee4merge"]
+	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "\"$PWD/$BASE\"" "\"$PWD/$REMOTE\"" "\"$PWD/$LOCAL\"" "\"$PWD/$MERGED\""
+	keepTemporaries = false
+	trustExitCode = false
+	keepBackup = false
+[merge]
+	keepBackup = false
+	tool = Kaleidoscope
+[diff]
+	tool = Kaleidoscope
+[alias]
+	cloner = "clone --recursive"
+	updatesubs = "submodule update --recursive --init"
+	reallyupdatesubs = "submodule foreach --recursive git submodule update --init"
+	pullallsubs = "submodule foreach --recursive git pull"
+	newbranch = "checkout -b"
+	zap = "!git reset --hard && git clean -f"
+	ksreview = "!f() { local SHA=${1:-HEAD}; local BRANCH=${2:-develop}; if [ $SHA == $BRANCH ]; then SHA=HEAD; fi; git difftool -y -t Kaleidoscope $BRANCH...$SHA; }; f"
+	ksshow = "!sh -c 'SHA=${1:-HEAD}; git difftool -y -t Kaleidoscope $SHA^..$SHA;' -"
+	ksdiff = difftool -y -t Kaleidoscope
+	psuh = "push"
+[mergetool]
+	keepBackup = false
+	prompt = false
+[push]
+	default = matching
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[core]
+	trustctime = false
+[rerere]
+	enabled = true
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f

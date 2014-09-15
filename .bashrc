@@ -1,7 +1,7 @@
 # Colors ----------------------------------------------------------
 export TERM=xterm-color
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
-export CLICOLOR=1 
+export CLICOLOR=1
 
 if [ "$OS" = "linux" ] ; then
   alias ls='ls --color=auto' # For linux, etc
@@ -33,8 +33,8 @@ alias colorslist="set | egrep 'COLOR_\w*'"  # lists all the colors
 
 # Completion -------------------------------------------------------
 
-# Turn on advanced bash completion if the file exists 
-# Get it here: http://www.caliban.org/bash/index.shtml#completion) or 
+# Turn on advanced bash completion if the file exists
+# Get it here: http://www.caliban.org/bash/index.shtml#completion) or
 # on OSX: sudo port install bash-completion
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
@@ -42,3 +42,5 @@ fi
 if [ -f /opt/local/etc/bash_completion ]; then
   . /opt/local/etc/bash_completion
 fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
