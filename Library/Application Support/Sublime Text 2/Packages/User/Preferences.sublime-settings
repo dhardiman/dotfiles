@@ -1,0 +1,23 @@
+{
+	"color_scheme": "Packages/Theme - Refined/Color Schemes/Tomorrow Night Refined.tmTheme",
+	"dictionary": "Packages/Language - English/en_GB.dic",
+	"enable_hexadecimal_encoding": false,
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		".DS_Store"
+	],
+	"folder_exclude_patterns":
+	[
+		".git"
+	],
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"save_on_focus_lost": true,
+	"theme": "Refresh.sublime-theme",
+	"translate_tabs_to_spaces": false,
+	"trim_trailing_white_space_on_save": true
+}

@@ -1,0 +1,38 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"BeautifyRuby",
+		"CSS Format",
+		"CSSFormat",
+		"Cucumber",
+		"Cucumber Step Finder",
+		"Git",
+		"Indent XML",
+		"JsFormat",
+		"JsMinifier",
+		"Markdown Extended",
+		"Markdown Preview",
+		"Package Control",
+		"Plist Binary",
+		"Pretty JSON",
+		"QuickThemes",
+		"sublime-curl",
+		"SublimeCodeIntel",
+		"Terminal",
+		"Theme - Nexus",
+		"Theme - Night",
+		"Theme - Nil",
+		"Theme - Phoenix",
+		"Theme - Refined",
+		"Theme - Refresh",
+		"Theme - Soda",
+		"WordCount",
+		"zenburn"
+	],
+	"repositories":
+	[
+		"https://github.com/surjikal/sublime-curl.git",
+		"https://github.com/surjikal/sublime-curl"
+	]
+}

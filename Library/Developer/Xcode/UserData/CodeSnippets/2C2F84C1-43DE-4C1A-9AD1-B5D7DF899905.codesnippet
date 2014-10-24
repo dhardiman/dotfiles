@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>measure</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>NS_INLINE void MVComputeTimeWithNameAndBlock(const char *caller, void (^block)()) {
+    CFTimeInterval startTimeInterval = CACurrentMediaTime();
+    block();
+    CFTimeInterval nowTimeInterval = CACurrentMediaTime();
+    NSLog(@"%s - Time Running is: %f", caller, nowTimeInterval - startTimeInterval);
+}
+
+#define MVComputeTime(...) MVComputeTimeWithNameAndBlock(__PRETTY_FUNCTION__, (__VA_ARGS__))</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>2C2F84C1-43DE-4C1A-9AD1-B5D7DF899905</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Measure Execution Time</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
