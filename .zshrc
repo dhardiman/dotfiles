@@ -37,7 +37,7 @@ export ANDROID_HOME=~/android-sdk-macosx/
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/davidhardiman/.rvm/gems/ruby-1.9.2-p180/bin:/Users/davidhardiman/.rvm/gems/ruby-1.9.2-p180@global/bin:/Users/davidhardiman/.rvm/rubies/ruby-1.9.2-p180/bin:/Users/davidhardiman/.rvm/bin:/usr/local/bin:/usr/local/sbin:/Users/davidhardiman/.gem/ruby/1.8/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+export PATH=$PATH:/Users/davidhardiman/.rvm/gems/ruby-1.9.2-p180/bin:/Users/davidhardiman/.rvm/gems/ruby-1.9.2-p180@global/bin:/Users/davidhardiman/.rvm/rubies/ruby-1.9.2-p180/bin:/Users/davidhardiman/.rvm/bin:/usr/local/bin:/usr/local/sbin:/Users/davidhardiman/.gem/ruby/1.8/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
