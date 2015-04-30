@@ -29,7 +29,7 @@ ZSH_THEME="dave"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git textmate osx brew git-flow pressrunbuild hockeyupload hockeydelete)
+plugins=(git textmate osx brew git-flow)
 
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/
 export ANDROID_HOME=~/android-sdk-macosx/
@@ -37,9 +37,9 @@ export ANDROID_HOME=~/android-sdk-macosx/
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/Users/davidhardiman/.rvm/gems/ruby-1.9.2-p180/bin:/Users/davidhardiman/.rvm/gems/ruby-1.9.2-p180@global/bin:/Users/davidhardiman/.rvm/rubies/ruby-1.9.2-p180/bin:/Users/davidhardiman/.rvm/bin:/usr/local/bin:/usr/local/sbin:/Users/davidhardiman/.gem/ruby/1.8/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+export PATH=$PATH
 
-export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+# export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 CDPATH=~/Projects
 
@@ -107,3 +107,5 @@ fixpngs ()
 }
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
